@@ -3,6 +3,7 @@ from keras.layers import Dense, Flatten, Rescaling
 from keras.layers import Conv2D, MaxPooling2D
 from keras.utils import image_dataset_from_directory
 import numpy as np
+import pandas as pd
 
 OCCULT_NEURONS = 100
 ACTIVATION_FUNCTION = "relu"
@@ -21,7 +22,7 @@ train_ds, val_ds = image_dataset_from_directory(
     batch_size=1,
     seed=8631,
     image_size=(496,369),
-    validation_split=0.1,
+    validation_split=0.2,
     subset='both',
 )
 
